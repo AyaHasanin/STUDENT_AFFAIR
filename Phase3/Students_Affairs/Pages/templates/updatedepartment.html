@@ -1,0 +1,18 @@
+<style>
+    a{text-decoration: none;}
+    il{text-align: center;}
+</style>
+<h1>Update member</h1>
+<ul>
+    <il><a href="{% url 'home' %}">Home</a></il>
+    <il><a href="{% url 'add' %}">Add</a></il>
+    <il><a href="{% url 'index' %}">Update</a></il>
+    <il><a href="">Search by Name</a></il>
+    <il><a href="">View All Student</a></il>
+</ul>
+<form action="updatedeprecord/{{mymember.id}}" method="post">
+    {% csrf_token %}
+    Department : <br><input type="text"   name="department" value="{{mymember.department}}" ><br><br>
+    <input type="submit" value="Submit">
+
+</form>

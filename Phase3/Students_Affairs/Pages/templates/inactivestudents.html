@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <meta charset="utf-8" />
+        <title>InactiveStudents</title>
+
+    </head>
+<body>
+    <style>
+        body {
+            margin: 0;
+            background-color: white;
+        } 
+        a {
+            border:2px solid black;
+            border-radius: 20px;
+            margin-left:920px;
+            margin-right:920px;
+            width: 40px;
+            padding-left:6px;
+            padding-right:6px;
+            font-size: 40px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            color: black;
+            background-color:blue;
+            text-decoration: none;
+        
+        }
+        
+            a:link {
+                text-decoration: none;
+            }
+        table{
+            width:50%;
+            text-align:center;
+            margin-left:auto;
+            margin-right:auto;       
+        }
+     tr {
+         border-color: black;
+         text-align: center;
+     }
+     th {
+         color: black;
+         text-align: center;
+         font-size: x-large;
+     }
+     td {
+         border: double;
+         border-color: black;
+         background-color: white;
+         text-align: center;
+         font-size:large;
+        }
+    </style> 
+<div id="demo" >
+    <center><h1>Inactive Students</h1></center>
+    <table border='3'> 
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Status</th>
+            </tr>
+    {%for x in student %}
+            <tr>
+                <td>{{x.id}}</td>
+                <td>{{x.name}}</td>
+                <td>{{x.status}}</td>
+            </tr>
+    
+    {% endfor  %}
+    </table><br>
+    <a href="{% url 'activeinactive' %}">Back</a>
+</div>
+<script>
+    function loadDoc() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("demo").innerHTML =
+            this.responseText;
+          } };
+          xhttp.open("GET", "student.txt",true);
+          xhttp.send();
+      }  
+    </script>
+    </body>
+
+<html>
+
+{% comment %} name={{name|default:'not found'}}</h3>
+  
+    الرمز ده بنستخدمه لما نحب نحط فلتر معين بعده -> | 
+capfirst ده فلتر بيخلي اول حرف كابتل 
+default ده فلتر تاني لنفترض مثلا في مرة اخدت قيمة من الداتا بيزاو حطيتها فاضية بدل كلمة عبدالرحمن وطلعت فاضية 
+notfound الفلتر ده بيقول لو هي فاضية قولي مثلا انهافاضية اولم توجد
+بتتكتب كده name={{name|default:'notfound'}}--> {% endcomment %}
+

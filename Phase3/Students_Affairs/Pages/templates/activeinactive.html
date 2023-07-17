@@ -1,0 +1,29 @@
+
+<html>
+ <style>
+    #demo1,#demo2{
+        border:2px solid black;
+        border-radius: 40px;
+        width: 25px;
+        padding-left:10px;
+        padding-right:10px;
+        font-size: 40px;
+        {% comment %} margin-top: 4px;
+        margin-bottom: 4px; {% endcomment %}
+        color: white;
+        background-color:brown;
+    
+    }
+    
+        a:link {
+            text-decoration: none;
+        }
+</style>
+<body >
+    <br>
+<center><br>
+ <br><a  id="demo1" href="{% url 'activestudents' %}">Active students</a><br>
+ <br><br>
+ <br><a id="demo2" href="{% url 'inactivestudents' %}">Inactive students</a></center>
+</body>
+</html>

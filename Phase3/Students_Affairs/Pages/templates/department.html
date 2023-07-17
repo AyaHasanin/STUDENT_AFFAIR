@@ -1,0 +1,20 @@
+
+<h1>Students</h1>
+
+<table border="1"><tr><th>ID</th>
+<th>Name</th><th>gpa</th><th>email</th><th>level</th><th>Status</th><th>phone</th><th>gender</th><th>department</th><th>Birth</th><th>Option1</th></tr>
+    {% for x in mymembers %}<tr>
+        <td>{{x.id}}</td>
+        <td>{{x.name}}</td>
+        <td>{{x.gpa}}</td>
+        <td>{{x.email}}</td>
+        <td>{{x.level}}</td>
+        <td>{{x.status}}</td>
+        <td>{{x.phone}}</td>
+        <td>{{x.gender}}</td>
+        <td>{{x.department}}</td>
+        <td>{{x.birth}}</td>
+        <td><a href="updatedepartment/{{x.id}}">Update Department</a></td>  
+    </tr>
+    {% endfor %}
+</table>

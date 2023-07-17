@@ -1,0 +1,24 @@
+<style>
+    a{text-decoration: none;}
+    il{text-align: center;}
+</style>
+<h1>Add member</h1>
+<ul>
+    <il><a href="{% url 'home' %}">Home</a></il>
+    <il><a href="{% url 'add' %}">Add</a></il>
+    <il><a href="{% url 'index' %}">Update</a></il>
+    <il><a href="">Search by Name</a></il>
+    <il><a href="">View All Student</a></il>
+</ul><form action="addrecord/" method="post">
+    {% csrf_token %}
+    Name :      <br><input type="text"   name="name"><br><br>
+    Gpa :       <br><input type="number" max ="4" min="0" step="0.01" name="gpa"><br><br>
+    Level :     <br><input type="number" step="1" max="4" min="1" name="level"><br><br>
+    Department :<br><input type="text"   name="department"><br><br>
+    Email :     <br><input type="email"  name="email"><br><br>
+    birth:      <br><input type="date"   name="birth"><br><br>
+    Phone :     <br><input type="phone"  name="phone"><br><br>
+    Status :    <br><input type="text" name="status"><br><br>
+    Gender :    <br><input type="text" name="gender" ><br><br>
+    <input type="submit" value="Submit">
+</form>

@@ -1,0 +1,27 @@
+<style>
+    a{text-decoration: none;}
+    il{text-align: center;}
+</style>
+<h1>Update member</h1>
+<ul>
+    <il><a href="{% url 'home' %}">Home</a></il>
+    <il><a href="{% url 'add' %}">Add</a></il>
+    <il><a href="{% url 'index' %}">Update</a></il>
+    <il><a href="">Search by Name</a></il>
+    <il><a href="">View All Student</a></il>
+</ul>
+<form action="updaterecord/{{mymember.id}}" method="post">
+    {% csrf_token %}
+    Name :      <br><input type="text"    name="name"       value="{{mymember.name}}"   ><br>
+    gpa :       <br><input type="number"  name="gpa"        value="{{mymember.gpa}}"    ><br>
+    email :     <br><input type="email"   name="email"      value="{{mymember.email}}"  ><br>
+    gender :    <br><input type="text"    name="gender"     value="{{mymember.gender}}" ><br>
+    Level :     <br><input type="number"  name="level"      value="{{mymember.level}"   step="1" max="4" min="1" ><br><br>
+    Department : <br><input type="text"   name="department" value="{{mymember.department}}" ><br><br>
+    Email :     <br><input type="email"   name="email"      value="{{mymember.email}}"><br><br>
+    Phone :     <br><input type="phone"   name="phone"      value="{{mymember.phone}}"><br><br>
+    Status :    <br><input type="text"    name="status"     value="{{mymember.status}}"><br><br>
+    birth :    <br><input type="Date"    name="birth"     value="{{mymember.birth}}"><br><br>
+    <input type="submit" value="Submit">
+
+</form>

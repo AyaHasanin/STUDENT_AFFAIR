@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <meta charset="utf-8" />
+        <title>ActiveStudents</title>
+
+    </head>
+<body>
+    <style>
+    body {
+        margin: 0;
+        background-color: white;
+    } 
+    a {
+        border:2px solid black;
+        border-radius: 20px;
+        margin-left:920px;
+        margin-right:920px;
+        width: 40px;
+        padding-left:6px;
+        padding-right:6px;
+        font-size: 40px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        color: black;
+        background-color:blue;
+    
+    }
+    
+        a:link {
+            text-decoration: none;
+        }
+    table{
+        width:50%;
+        text-align:center;
+        margin-left:auto;
+        margin-right:auto;
+            
+    }
+ tr {
+     border-color: black;
+     text-align: center;
+ }
+ th {
+     color: black;
+     text-align: center;
+     font-size: x-large;
+ }
+ td {
+     border: double;
+     border-color: black;
+     background-color: white;
+     text-align: center;
+     font-size:large;
+    }
+</style>  
+<center><h1>Active Students</h1></center>
+<table border='3'> 
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Status</th>
+        </tr>
+{%for x in student %}
+        <tr>
+            <td>{{x.id}}</td>
+            <td>{{x.name}}</td>
+            <td>{{x.status}}</td>
+        </tr>
+
+{% endfor  %}
+</table><br>
+<a href="{% url 'activeinactive' %}">Back</a>
+</body>
+{% comment %} <!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>ActiveStudents</title>
+</head>
+<style>
+body {
+    margin: 0;
+    background-color: rgb(186, 143, 188);
+}
+
+div {
+    width: 2000px;
+    height: 60px;
+    background-color: rgba(0,0,0,0.5);
+    margin: auto;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    margin-left: 2px;
+    margin-right:2px;
+    font-size: 140%;
+}
+
+li {
+    display: inline block;
+    padding: 5px;
+  
+    border-right: 1px solid #bbb;
+}
+
+input {
+    padding: 10px;
+    background-color: red;
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    font-size: 10%;
+    color: black;
+    font-size: 90%;
+}
+
+    a:link {
+        text-decoration: none;
+    }
+
+button {
+    display: block;
+    text-align: center;
+    font-size: xx-large;
+    width: 15%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    background-color: cadetblue;
+    border-radius: 15%;
+}
+</style>
+<body background="vintage.jpg">
+    <link rel="stylesheet" href="StyleSheet1.css">
+    <div>
+        <ul>
+            <li> <a href="file:///F:/New%20folder%20(3)/home%20page.html" alt=>Home page</a></li>
+            <li> <a href="file:///F:/New%20folder%20(3)/add%20student.html">Add student</a></li>
+            <li> <a href="file:///F:/New%20folder%20(3)/Search%20by%20id.html">Delete/Update student</a></li>
+            <li> <a href="file:///F:/New%20folder%20(3)/Search%20by%20Name.html">Search for active student</a></li>
+            <li> <a href="file:///F:/New%20folder%20(3)/departement%20page.html">Assign department</a></li>
+            <li> <a href="file:///F:/New%20folder%20(3)/student%20%20status.html">View active/inactive students</a></li>
+            <li> <a href="file:///F:/New%20folder%20(3)/Active%20students.html">Active students</a></li>
+            <li> <a href="file:///F:/New%20folder%20(3)/Inactive%20students.html">Inactive students</a></li>
+            <li> <a href="file:///F:/New%20folder%20(3)/Update.html">Update student</a></li>
+            <li> <a href="file:///F:/New%20folder%20(3)/change%20status.html">Change status</a></li>
+        </ul>
+    </div>
+    <h1 >Active students</h1>
+    <table>
+       
+        <tr>
+            <th>Name</th>
+            <th>ID</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Active</td>
+        </tr>
+    </table>
+</body>
+</html> {% endcomment %}
